@@ -1,0 +1,624 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body {
+  line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+   font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+/* ココから開始 */
+
+body {
+  background-color: rgba(224, 195, 140, .644);
+	background-image: linear-gradient(transparent 56.25%, rgba(63, 30, 3, 0.75) 56.25%, rgba(63, 30, 3, 0.75) 75%, transparent 75%),
+  linear-gradient(90deg, transparent 56.25%, rgba(63, 30, 3, 0.75) 56.25%, rgba(63, 30, 3, 0.75) 75%, transparent 75%),
+  linear-gradient(transparent 25%, rgba(140,0,0,.35) 25%, rgba(140,0,0,.35) 31.25%, transparent 31.25%),
+  linear-gradient(90deg, transparent 25%, rgba(140,0,0,.35) 25%, rgba(140,0,0,.35) 31.25%, transparent 31.25%);
+	background-size: 32px 32px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #452407;
+  font-family: 'Courgette', cursive;
+  background: white;
+}
+
+.menu {
+  width: 90%;
+  height: 80px;
+  display: flex;
+  position: fixed;
+  background: rgba(140, 40, 0, .5);
+  z-index: 6;
+}
+
+.menu.transform{
+  background: rgba(63, 30, 3, .8);
+  z-index: 10;
+}
+
+.nav {
+  padding: 30px 0;
+  margin: 0 40px 0 auto;
+}
+
+.nav-menu li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.top-img {
+  max-width: 100%;
+  display: block !important;
+}
+
+.resp-img {
+  max-width: 100%;
+  display: none !important;
+  position: relative;
+}
+
+#about, #service, #works, #contact {
+  font-size: 32px;
+  text-align: center;
+  margin: 80px auto 0;
+  font-weight: normal;
+  padding-bottom: 10px;
+  width: 20%;
+  border-bottom: 2px dotted #3f1e03;
+}
+
+#about::before, #service::before, #works::before, #contact::before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin-top: -100px;
+  visibility: hidden;
+}
+
+/* レスポンシブメニュー */
+#input {
+  display: none;
+}
+
+.line {
+  width: 30px;
+  height: 4px;
+  background: #3f1e03;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+#resp-nav {
+  background: rgba(140, 40, 0, .5);
+  width: 200px;
+  height: 200px;
+  transform: translateX(-200px);
+  position: fixed;
+  transition: .3s ease-in-out;
+  border: 1px solid white;
+  z-index: 5;
+}
+
+#input:checked ~ #resp-nav {
+  transform: translateX(0);
+}
+
+.resp-nav-menu li {
+  margin: 20px;
+  border-bottom: 1px solid white;
+}
+
+.resp-nav-menu a {
+  font-size: 24px;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+.resp-menu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  z-index: 10;
+}
+
+/* 消すかも */
+
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 1;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+#input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+.nav-close {
+  display: none;
+}
+
+/* About */
+
+.profile {
+  display: flex;
+  margin-top: 70px;
+}
+
+.pro1 {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 45%;
+}
+
+.por-img {
+  width: 25%;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  border: 2px solid white;
+  box-shadow: 0 0 5px #3f1e03;
+}
+
+.skill li{
+  float: left;
+  margin: 10px 0;
+  width: calc(100% / 4);
+  list-style: none;
+  text-align: center;
+  line-height: 2em;
+}
+
+.pro2 {
+  line-height: 2em;
+  width: 50%;
+  overflow: hidden;
+}
+
+.profile h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.pro2 span {
+  color: #f86cad;
+  font-size: 30px;
+}
+
+.skill h2 {
+  margin-left: 3%;
+}
+
+/* Service */
+
+.service-sec {
+  display: flex;
+}
+
+.service1 {
+  border: 2px solid #3f1e03;
+  box-shadow: 0 0 5px #3f1e03;
+  width: 23%;
+  padding: 20px 20px 10px;
+  border-radius: 10px;
+  margin: 70px auto 0;
+  font-size: 15px;
+}
+
+.service1 .code {
+  display: block;
+  text-align: center;
+}
+
+.comment {
+  line-height: 2em;
+}
+
+.comment h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* works */
+
+.sec2 {
+  display: flex;
+}
+
+.work1 {
+  width: calc(100% / 3);
+  height: auto;
+  border: 5px ridge #452407de;
+  box-shadow: 0 0 3px #3f1e03;
+  border-radius: 5px;
+  margin-top: 70px;
+  position: relative;
+  margin-left: 50px;
+}
+
+.work1:last-child {
+  margin-right: 50px;
+}
+
+.test1 {
+  width: 100%;
+  height: auto;
+}
+
+.test-hov {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  transition: all .2s;
+  color: transparent;
+}
+
+.test-hov:hover {
+  background-color: rgba(255,255,255,0.9);
+  color: #452407;
+}
+
+.test-menu {
+  display: block;
+  margin-top: 25%;
+  text-align: center;
+  letter-spacing: .2em;
+  font-weight: bold;
+}
+
+/* Contact */
+
+.foam {
+  width: 400px;
+  margin: 70px auto 50px;
+}
+
+label {
+  display: block;
+  line-height: 2em;
+}
+
+input {
+  display: block;
+  width: 100%;
+  line-height: 1.5em;
+  border-radius: 2px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.foam-content {
+  margin-bottom: 16px;
+}
+
+button {
+  background: rgba(63, 30, 3, .9);
+  color: white;
+  width: 250px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.foam-span {
+  background: rgba(63, 30, 3, .9);
+  color: white;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.foam-info {
+  font-size: 14px;
+  line-height: 2em;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(63, 30, 3, .9);
+  color: #ccc;
+  font-size: 12px;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+}
+
+.mark {
+  margin: 0 5px 10px;
+  color: white;
+}
+
+/* 戻るボタン */
+
+#page-top1 img {
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid rgba(63, 30, 3);
+}
+
+#top_scroll{ 
+  position: relative; 
+  z-index: 100; 
+  margin: 0; 
+  padding: 0; 
+}
+
+#page-top1{
+  display: block;
+  position: fixed;
+  z-index: 9999;
+  /* bottom: -100px; */
+  right: 30px;
+  /* padding: 0; */
+  /* color: #222; */
+  /* text-align: center; */
+  /* text-decoration: none; */
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+
+#page-top1:hover{ 
+  /* background: ; */
+  transform: translateY(-10px);
+}
+
+/* #top_scroll:hover{
+  background: #fff;
+} */
+
+/* レスポンシブ対応 */
+/* タブレット */
+@media screen and (max-width: 959px) {
+  .container {
+    width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    height: 60px;
+  }
+
+  .top-img {
+    display: none !important;
+  }
+
+  .resp-img {
+    display: block !important;
+  }
+
+  .profile {
+    display: block;
+  }
+
+  .pro1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .pro2 {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .skill-nav {
+    margin-bottom: 150px;
+  }
+
+  .service-sec {
+    display: block;
+  }
+
+  .service1 {
+    width: 60%;
+  }
+
+  .sec2 {
+    display: block;
+  }
+
+  .work1 {
+    width: 60%;
+    height: auto;
+    margin: 50px auto 0;
+  }
+
+  .work1:last-child {
+    margin: 50px auto 0;
+  }
+
+}
+
+/* スマホ */
+@media screen and (max-width: 559px) {
+
+  .menu {
+    display: none;
+  }
+
+  .resp-menu {
+    display: block;
+  }
+  
+  #about, #service, #works, #contact {
+    font-size: 24px;
+    margin: 30px auto 0;
+  }
+
+  .profile, .service1, .foam {
+    margin-top: 40px;
+  }
+
+  .skill h2 {
+    font-size: 20px;
+  }
+
+  .skill .fab {
+    font-size: 40px;
+  }
+
+  .skill li a {
+    font-size: 12px;
+  }
+
+  .pro1 {
+    width: 85%;
+  }
+
+  .pro2 p {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .comment h3 {
+    font-size: 16px;
+  }
+
+  .comment p {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .service1 {
+    width: 70%;
+  }
+
+  .work1 {
+    width: 70%;
+    height: auto;
+    margin: 60px auto;
+
+  }
+
+  .foam {
+    width: 300px;
+  }
+
+}
