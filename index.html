@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHIHO PORTFOLIO</title>
+  <!-- ファビコン -->
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <!-- フォームラン -->
+  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- グーグルフォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+  <!-- アイコン -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+
+    <header id="top">
+      <!-- pc用メニュー -->
+      <div class="menu">
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- レスポンシブ対応 -->
+      <div class="resp-menu">
+        <input type="checkbox" id="input" class="nav-close">
+        <label for="input"><div class="line"></div><div class="line"></div><div class="line"></div></label>
+        <!-- 消すかも -->
+        <label class="nav-close" id="nav-close" for="input"></label>
+        <!-- ココまで -->
+        <nav id="resp-nav">
+          <ul class="resp-nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <img class="top-img" src="img/CHIHO PORTFOLIO3.png" alt="トップ画像">
+      <img class="resp-img" src="img/CHIHO PORTFOLIO2.png" alt="レスポンシブ画像">
+    </header>
+    <main>
+      <!-- About -->
+      <section  class="hero">
+        <h1 id="about">About</h1>
+        <div class="profile">
+          <div class="pro1">
+            <img class="por-img" src="img/isao777-7.png" alt="Profile写真">
+            <div class="skill">
+              <h2>Skill</h2>
+              <ul class="skill-nav">
+                <li><i class="fab fa-html5 fa-3x"></i><br><a>HTML</a></li>
+                <li><i class="fab fa-css3-alt fa-3x"></i><br><a>CSS</a></li>
+                <li><i class="fab fa-js-square fa-3x"></i><br><a>JavaScript</a></li>
+                <li><i class="fab fa-wordpress fa-3x"></i><br><a>WordPress</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pro2">
+            <h2><span>C</span>hihoko <span>H</span>irai</h2>
+            <p>宮崎県出身 東京都在住<br>
+              証券会社で経理部所属 信託銀行でセトルメント業務<br>
+              オフィスレイアウト会社でCADオペ<br>
+              スポーツ関連企業で営業事務<br>
+              様々の経験を経てエンジニアを目指し勉強中<br>
+              複数の業界経験を活かし、お客様のご希望を形にします<br>
+              現在、様々な要望にお応え出来るよう、スキルアップに努めております
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Service -->
+      <section>
+        <h1 id="service">Service</h1>
+        <div class="service-sec">
+          <div class="service1">
+            <i class="fas fa-laptop-code fa-5x code"></i>
+            <div class="comment">
+              <h3>WEBサイト作成</h3>
+              <p>コーポレートサイト、コーディング代行、LP制作など、Webサイト制作全般をお受けします。データの軽量化や、保守性を意識したコーディングを行います。
+                既存サイトの不具合対応や更新もお気軽にご相談下さい。</p>
+            </div>
+          </div>
+          <div class="service1">
+            <i class="fas fa-mobile-alt fa-5x code"></i>
+            <div class="comment">
+              <h3>レスポンシブ対応</h3>
+              <p>Webサイトをレスポンシブ化させることはユーザビリティを向上させる上で重要な役割を担っています。スマホ、タブレット、パソコンどの端末でもストレスなく閲覧できるように、レスポンシブ対応いたします。</p>
+            </div>
+          </div>
+          <div class="service1">
+            <i class="fab fa-wordpress fa-5x code"></i>
+            <div class="comment">
+              <h3>WordPress制作</h3>
+              <p>お預かりしたXD・Photoshopなどのデザインデータをもとに、CMS(WordPress)を導入した動的なサイトを構築いたします。既存テーマカスタマイズから、オリジナルテーマ作成まで行います。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Works -->
+      <section>
+        <h1 id="works">Works</h1>
+        <div class="sec2">
+          <div class="work1">
+            <a href="https://drive.google.com/file/d/1E6BLJgxNLqt45uhJsMS-AxJvfXQNMoyA/view?usp=sharing">
+              <img class="test1" src="img/test1-1.png" alt="test1">
+              <div class="test-hov">
+                <p class="test-menu">SIMPLE SITE</p>
+              </div>
+            </a>
+          </div>
+          <div class="work1">
+            <a href="https://drive.google.com/file/d/19RNCnkuJ8EysUYEGw1XalELw0OrBUgMN/view?usp=sharing">
+              <img class="test1" src="img/test2-1.png" alt="test1">
+              <div class="test-hov">
+                <p class="test-menu">CORPORATE SITE</p>
+              </div>
+            </a>
+          </div>
+          <div class="work1">
+            <a href="https://drive.google.com/file/d/18ov4jmBqzUybB6mHJCWvoj6A9epQzEcN/view?usp=sharing">
+              <img class="test1" src="img/test5-1.png" alt="test1">
+              <div class="test-hov">
+                <p class="test-menu">BOOTSTRAP</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </section>
+      <!-- Contact -->
+      <section>
+        <h1 id="contact">Contact</h1>
+        <div class="foam">
+          <!-- class, action, methodを変更しないでください -->
+          <form class="formrun" action="https://form.run/api/v1/r/0swdbm9xo1wce7qndgftf3ve" method="post">
+            <!-- ↓自由に要素を追加・編集することができます -->
+            <div class="foam-content">
+              <label>お名前</label>
+              <input name="お名前" type="text" placeholder="例）山田 太郎">
+            </div>
+
+            <div class="foam-content">
+              <label>メールアドレス <span class="foam-span">必須</span></label>
+              <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required placeholder="例） sample@mail.com">
+              <div class="foam-info" data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+            </div>
+
+            <div class="foam-content">
+              <label>お問い合わせ <span class="foam-span">必須</span></label>
+              <textarea rows="10" name="お問い合わせ" data-formrun-required></textarea>
+              <div class="foam-info" data-formrun-show-if-error="お問い合わせ">お問い合わせ入力してください</div>
+            </div>
+
+            <!-- ボット投稿をブロックするためのタグ -->
+            <div class="_formrun_gotcha">
+              <style media="screen">
+                ._formrun_gotcha {
+                  position: absolute !important;
+                  height: 1px;
+                  width: 1px;
+                  overflow: hidden;
+                }
+              </style>
+              <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+              <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+            </div>
+
+            <button type="submit" data-formrun-error-text="未入力の項目があります"
+              data-formrun-submitting-text="送信中...">送信</button>
+          </form>
+
+        </div>
+
+      </section>
+
+    </main>
+    <div id="top_scroll">
+      <a href="#" id="page-top1"><img src="img/1723669.png" alt="ページトップスクロール"></a>
+  </div>
+    <footer>
+      <ul>
+        <li><a href="https://twitter.com/chiho_qru">
+          <i class="fab fa-twitter fa-2x mark"></i></a></li>
+        <li><a href="https://www.instagram.com/chipo722/">
+          <i class="fab fa-instagram fa-2x mark"></i></a></li>
+      </ul>
+      <p>&copy; CHIHO.HIRAI 2020.5</p>
+    </footer>
+  </div>
+<!-- Worksの装飾 -->
+  <script>
+
+    var _window = $(window),
+      _header = $('.menu'),
+      heroBottom;
+
+    _window.on('scroll', function () {
+      heroBottom = $('.hero').height();
+      if (_window.scrollTop() > heroBottom) {
+        _header.addClass('transform');
+      }
+      else {
+        _header.removeClass('transform');
+      }
+    });
+
+    _window.trigger('scroll');
+
+  </script>
+  <!-- 戻るボタン -->
+  <script type="text/javascript">
+ 
+    $(function(){
+     
+    var pageTop1 = $("#page-top1");
+    pageTop1.click(function () {
+      $('body, html').animate({ scrollTop: 0 }, 500);
+      return false;
+    });
+    $(window).scroll(function () {
+
+      if($(this).scrollTop() >= 200) {
+        pageTop1.css( "bottom", "30px" );
+      } else {
+        pageTop1.css( "bottom", "-85px" );
+      }
+    });
+
+
+  });
+
+</script>
+
+
+</body>
+
+</html>
